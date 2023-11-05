@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import {TicketDoc} from './ticket';
-import {Status} from '../events/types/status';
+import {Status} from '@pdbooktickets/common';
+export{Status};
 
 interface OrderAttrs {
     userId: string;

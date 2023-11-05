@@ -3,10 +3,9 @@ import express, {Request, Response} from 'express';
 import { requireAuth, validateRequest, NotFoundError, BadRequestError } from '@pdbooktickets/common';
 import {body} from 'express-validator';
 import {Ticket} from '../models/ticket';
-import { Order } from '../models/order';
+import { Order, Status } from '../models/order';
 import {OrderCreatedPublisher} from '../events/publishers/order-created-publisher';
 import { natsWrapper } from '../nats-wrapper';
-import { Status } from '../events/types/status';
 
 const router = express.Router();
 const EXPIRATION_WINDOW_SECONDS = 15*60;

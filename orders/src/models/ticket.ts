@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-import {Order} from './order';
-import {Status} from '../events/types/status';
+import {Order, Status} from './order';
 
 interface TicketAttrs {
     title: string;

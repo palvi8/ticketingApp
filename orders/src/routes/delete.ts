@@ -1,9 +1,8 @@
 import express, {Request, Response} from 'express';
 import { requireAuth, NotFoundError, NotAuthorizedError } from '@pdbooktickets/common';
-import { Order } from '../models/order';
+import { Order, Status } from '../models/order';
 import { OrderCancelledPublisher } from '../events/publishers/order-cancelled-publisher';
 import { natsWrapper } from '../nats-wrapper';
-import { Status } from "../events/types/status";
 
 const router = express.Router();
 
